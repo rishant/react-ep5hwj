@@ -4,6 +4,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Manual from './manual';
+import Automatic from './automatic';
+import UntriagedFailures from './untriagedFailures';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -67,13 +70,13 @@ export default function VerticalTabs() {
         <Tab label="Automatic Email" {...a11yProps(2)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        Untriaged Failures
+        <UntriagedFailures />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Manual Email
+        <Manual />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Automatic Email
+        <Automatic />
       </TabPanel>
     </Box>
   );
